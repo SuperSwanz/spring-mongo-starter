@@ -10,4 +10,8 @@ public interface UserService {
 	public User get(final String id);
 
 	public User save(final User user);
+
+	public List<User> findUsersByFirstName(final String lastName);
+
+	public List<User> findUsersByLastName(final String firstName);
 }
