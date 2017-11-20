@@ -13,6 +13,9 @@ public interface UserRepository extends MongoRepository<User, String> {
 
 	@Query("{ 'firstName' : ?0 }")
 	public List<User> findUsersByFirstName(final String firstName);
-	
+
 	public List<User> findUsersByLastName(final String lastName);
+
+	//@Query("{ 'age' : { $gt: ?0, $lt: ?1 } }")
+	public List<User> findUsersByAgeBetween(final int ageGT, final int ageLT);
 }

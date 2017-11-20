@@ -47,4 +47,9 @@ public class UserController {
 		}
 		return null;
 	}
+
+	@RequestMapping(value = "/age", method = RequestMethod.GET)
+	public List<User> getByAge(@RequestParam("ageGT") final int ageGT, @RequestParam("ageLT") final int ageLT) {
+		return userService.findUsersByAgeBetween(ageGT, ageLT);
+	}
 }

@@ -14,4 +14,6 @@ public interface UserService {
 	public List<User> findUsersByFirstName(final String lastName);
 
 	public List<User> findUsersByLastName(final String firstName);
+	
+	public List<User> findUsersByAgeBetween(final Integer ageGT, final Integer ageLT);
 }

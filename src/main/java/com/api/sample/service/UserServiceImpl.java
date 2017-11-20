@@ -38,4 +38,9 @@ public class UserServiceImpl implements UserService {
 	public List<User> findUsersByLastName(final String lastName) {
 		return userRepository.findUsersByLastName(lastName);
 	}
+	
+	@Override
+	public List<User> findUsersByAgeBetween(final Integer ageGT, final Integer ageLT) {
+		return userRepository.findUsersByAgeBetween(ageGT, ageLT);
+	}
 }
